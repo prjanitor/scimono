@@ -29,7 +29,7 @@ class ResourceEndpointConditionEvaluation {
 
   private ConditionEvaluationResult endpointShouldContainUsersConditionResult(String resourceType) {
     return isEmptyConditionResult.getAsBoolean()  ?
-        disabled(String.format("Backend system has %s already created.", resourceType)) :
-        enabled(String.format("Backend system has no %s created.", resourceType));
+        disabled(String.format("Backend system has no %s created.", resourceType)) :
+        enabled(String.format("Backend system has %s already created.", resourceType));
   }
 }
